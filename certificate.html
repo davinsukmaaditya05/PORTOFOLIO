@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a2e;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background-color: #002B5B;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #00bcd4;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .certificates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .certificate-box {
+      background-color: #fff;
+      color: #002B5B;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .certificate-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .certificate-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: 0.3s ease;
+    }
+
+    .certificate-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Modal (lightbox) styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.85);
+    }
+
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      animation: zoomIn 0.5s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ff5252;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Davin Sukma Aditya</h1>
+      <nav>
+        <a href="aboutme.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="pengalaman.html">pengalaman</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Sertifikat Saya</h2>
+      <section class="certificates">
+        <div class="certificate-box" onclick="openModal('certificate1.png')">
+          <img src="certificate1.png" alt="Certificate 1">
+          <div class="certificate-title">FORTINET TRAINING INSTITUTE</div>
+        </div>
+        <div class="certificate-box" onclick="openModal('certificate2.png')">
+          <img src="certificate2.png" alt="Certificate 2">
+          <div class="certificate-title">FORTINET TRAINING INSTITUTE</div>
+        </div>
+        <div class="certificate-box" onclick="openModal('certificate3.png')">
+          <img src="certificate3.png" alt="Certificate 3">
+          <div class="certificate-title">ALWASY NGODING</div>
+        </div>
+        <div class="certificate-box" onclick="openModal('certificate4.png')">
+          <img src="certificate4.png" alt="Certificate 4">
+          <div class="certificate-title">GREEN MINSET</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Davin Sukma Aditya</p>
+  </footer>
+
+  <!-- Modal Lightbox -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Preview Sertifikat" />
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Tutup modal jika klik luar gambar
+    window.addEventListener("click", function(event) {
+      const modal = document.getElementById("imageModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

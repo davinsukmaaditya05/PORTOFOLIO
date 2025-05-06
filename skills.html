@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a2e; /* biru gelap kehitaman */
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background-color: #002B5B;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #00bcd4;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      color: #00bcd4;
+    }
+
+    .skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.skill-box i {
+  font-size: 1.5rem;
+  color: #64ffda;
+}
+.skill-box {
+  background: #00bcd4;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.skill-box:hover {
+  transform: translateY(-5px);
+  background: #112240;
+}
+    @keyframes slideUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Davin Sukma Aditya</h1>
+      <nav>
+        <a href="aboutme.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="pengalaman.html">Pengalaman</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Keahlian Saya</h2>
+      <section class="skills">
+        <div class="skill-box"><i class="fas fa-network-wired"></i> Cisco Packet Tracer</div>
+        <div class="skill-box"><i class="fas fa-wifi"></i> Mikrotik RouterOS</div>
+        <div class="skill-box"><i class="fas fa-terminal"></i> Basic Linux Command Line</div>
+        <div class="skill-box"><i class="fas fa-project-diagram"></i> Network Configuration LAN, WLAN, IP Address</div>
+        <div class="skill-box"><i class="fas fa-lightbulb"></i> Creative Innovative Thinking</div>
+        <div class="skill-box"><i class="fas fa-shield-alt"></i> Networking (Cisco/Fortinet)</div>
+        <div class="skill-box"><i class="fas fa-tools"></i> Problem Solving</div>
+      </section>
+    </div>
+  </main>
+  
+
+  <footer>
+    <p>&copy; 2025 Davin Sukma Aditya</p>
+  </footer>
+</body>
+</html>

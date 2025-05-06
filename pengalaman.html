@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengalaman</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a2e;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background-color: #002B5B;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #00bcd4;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .experiences {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 20px;
+    }
+
+    .experience-card {
+  background-color: #0a192f;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card a:hover {
+  background-color: #112240;
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateY(-5px);
+}
+
+.experience-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #64ffda;
+}
+
+.experience-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    @keyframes fadeIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Davin Sukma Aditya</h1>
+      <nav>
+        <a href="aboutme.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="pengalaman.html">Pengalaman</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Pengalaman Saya</h2>
+      <section class="experiences">
+        <div class="experience-card">
+          <h3>Konfigurasi Jaringan LAN & WLAN</h3>
+          <a href="modul1.html">
+          <p>Melakukan instalasi dan konfigurasi jaringan lokal dan nirkabel menggunakan perangkat switch, router, dan access point.</p>
+        </a>
+        <div class="experience-card">
+          <h3>Manajemen Router Mikrotik</h3>
+          <a href="modul2.html">
+          <p>Mengatur routing, firewall, dan bandwidth menggunakan Mikrotik RouterOS melalui Winbox dan terminal.</p>
+        </a>
+        <div class="experience-card">
+          <h3>Praktik Server dan Virtualisasi</h3>
+          <a href="modul3.html">
+          <p>Konfigurasi server (web, DNS, DHCP) dan penerapan virtualisasi menggunakan VirtualBox dan Proxmox.</p>
+        </a>
+      </section>
+    </div>
+  </main>  
+
+  <footer>
+    <p>&copy; 2025 Davin Sukma Aditya</p>
+  </footer>
+</body>
+</html>

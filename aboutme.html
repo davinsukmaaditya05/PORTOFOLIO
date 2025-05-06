@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Saya</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a2e;
+      color: #ffffff;
+    }
+
+    header, footer {
+      background-color: #141c61;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    main {
+      flex: 1;
+      padding: 0;
+    }
+
+    .about-section {
+      background-image: url('fotokeren.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .about-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 1;
+      background: rgba(48, 48, 49, 0.85);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      max-width: 700px;
+      animation: slideUp 1.2s ease;
+    }
+
+    .about-content h2 {
+      margin-top: 0;
+      font-size: 2em;
+      color: #00bcd4;
+    }
+
+    .about-content p {
+      line-height: 1.6;
+    }
+
+    .sosmed-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sosmed-links li {
+      margin-bottom: 10px;
+    }
+
+    .sosmed-links a {
+      color: #444444;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .sosmed-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #141c61;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content {
+        margin: 20px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Davin Sukma Aditya</h1>
+      <nav>
+        <a href="aboutme.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="pengalaman.html">Pengalaman</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="about-content">
+        <h2>Tentang Saya</h2>
+        <p>Nama saya <strong>Davin Sukma Aditya</strong>, seorang siswa dari <strong>SMKN 1 Nglegok</strong> yang sedang menempuh pendidikan di jurusan <strong>Teknik Komputer dan Jaringan (TKJ)</strong>. Saya adalah pribadi yang antusias dalam dunia pengembangan web, memiliki semangat belajar tinggi, serta tertarik pada teknologi baru.</p>
+        <ul class="sosial-links">
+          <li><a href="https://www.instagram.com/daxpz.3105" >Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/namapengguna">LinkedIn</a></li>
+          <li><a href="tel:085233037377">Telepon: 085233037377</a></li>
+        </ul>        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Davin Sukma Aditya</p>
+  </footer>
+</body>
+</html>
